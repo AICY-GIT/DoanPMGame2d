@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public bool isMoving;
+    public SpriteRenderer charaterSR;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = transform.GetComponentInChildren<Animator>();
+        charaterSR = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -21,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
 
-        // Check if the player is moving
+       // kiem tra di chuyen
         isMoving = moveInput != Vector2.zero;
     }
 
@@ -30,20 +32,23 @@ public class PlayerMovement : MonoBehaviour
         moveInput.Normalize();
         rb.velocity = moveInput * speed;
 
-        // Set the walking animation based on movement
         animator.SetBool("IsWalking", isMoving);
 
-        // Flip the character based on movement direction
-        if (moveInput.x != 0)
+        // Rotate the character
+        if (charaterSR != null)
         {
-            if (moveInput.x > 0)
+            if (moveInput.x != 0)
             {
-                transform.localScale = new Vector2(1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector2(-1, 1);
+                if (moveInput.x > 0)
+                {
+                    charaterSR.transform.localScale = new Vector2(1, 1);
+                }
+                else
+                {
+                    charaterSR.transform.localScale = new Vector2(-1, 1);
+                }
             }
         }
     }
+
 }
