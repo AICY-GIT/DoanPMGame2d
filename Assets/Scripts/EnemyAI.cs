@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     public float nextWPDistance;
     public Seeker seeker;
     public SpriteRenderer characterSR;
-    public Transform target;
+    Transform target;
     Path path;
 
     Coroutine moveCoroutine;
