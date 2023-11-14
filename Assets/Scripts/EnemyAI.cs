@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.TextCore.Text;
+
 public class EnemyAI : MonoBehaviour
 {   
     public  float moveSpeed;
@@ -12,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     Path path;
 
     Coroutine moveCoroutine;
+  
      private void Start()
     {
         target = FindAnyObjectByType<PlayerMovement>().gameObject.transform;
@@ -26,7 +29,8 @@ public class EnemyAI : MonoBehaviour
 
 
         }    
-    }    
+    }
+  
     void OnPathCallBack(Path p)
     {
         if (p.error) return;
