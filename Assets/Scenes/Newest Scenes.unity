@@ -923,6 +923,10 @@ MonoBehaviour:
   nextWPDistance: 0.4
   seeker: {fileID: 676945106}
   upDateContinuesPath: 1
+  isShootable: 0
+  EnemyBullet: {fileID: 0}
+  bulletSpeed: 0
+  timeBtwFire: 0
 --- !u!114 &676945106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,7 +1210,7 @@ GameObject:
   - component: {fileID: 1475553317}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1536,6 +1540,10 @@ MonoBehaviour:
   nextWPDistance: 0.4
   seeker: {fileID: 1922619511}
   upDateContinuesPath: 0
+  isShootable: 1
+  EnemyBullet: {fileID: 4002700775111236668, guid: d76d465449782df4db1afc8daacd47fc, type: 3}
+  bulletSpeed: 20
+  timeBtwFire: 2
 --- !u!114 &1922619511
 MonoBehaviour:
   m_ObjectHideFlags: 0
