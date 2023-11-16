@@ -81,6 +81,15 @@ public class NewEnemyAI : MonoBehaviour
             Vector2 force = direction * moveSpeed * Time.deltaTime;
             transform.position += (Vector3)force;
 
+            if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (direction.x < 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+
             float distance = Vector2.Distance(transform.position, path.vectorPath[currentWP]);
             if (distance < nextWPDistance)
             {
