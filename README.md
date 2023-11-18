@@ -16,11 +16,11 @@
 |  Basic Enemy Path find | ✅  |   |
 |  Basic Enemy Shotting  | ✅  |   |
 |  Player health bar | ✅  |   |
-|  Interact with player health bar |   | ❎  |
 |  Dash ability | ✅  |   |
 |  Game menu | ✅  |   |
 |  Pasue game menu | ✅  |   |
 |  Game setting | ✅  |   |
+|  Interact with player health bar |   | ❎  |
 |  Game sound |   | ❎  |
 |  Player dead  |   | ❎  |
 |  Enemy spawn |   | ❎  |
