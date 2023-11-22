@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
         HealthBar.UpdateBar(currentHeal, Maxhealth);
 
     }
-    public void TakeDamege(int damage)
+    public void TakeDamage(int damage)
     {
         if (saveTimeCooldown <= 0)
         {
@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
         saveTimeCooldown-=Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            TakeDamege(20);
+            TakeDamage(20);
         }
     }
 }

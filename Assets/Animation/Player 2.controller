@@ -37,16 +37,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1660127203518756369}
-    m_Position: {x: 90, y: 320, z: 0}
+    m_Position: {x: 40, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5633474933250289858}
-    m_Position: {x: 150, y: 490, z: 0}
+    m_Position: {x: 120, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3628821053495048181}
     m_Position: {x: 450, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8839499760059394386}
-    m_Position: {x: 485, y: 365, z: 0}
+    m_Position: {x: 540, y: 400, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -124,13 +124,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsWalking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
