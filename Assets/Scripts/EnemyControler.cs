@@ -9,14 +9,15 @@ public class EnemyControler : MonoBehaviour
     public int minDamage;
     public int maxDamage;
     private bool isDamaging = false;
-    PlayerHealth enemythealth;
+    health enemythealth;
     private void Start()
     {
-        enemythealth=GetComponent<PlayerHealth>();
+        enemythealth=GetComponent<health>();
     }
     public void TakeDamage(int damage)
     {
-        enemythealth.TakeDamage(damage);
+      
+        enemythealth.TakeDam(damage);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +45,6 @@ public class EnemyControler : MonoBehaviour
         if (players != null)
         {
             int damage = UnityEngine.Random.Range(minDamage, maxDamage);
-             Debug.Log("Player take damage " + damage);
             players.TakeDamage(damage);
            
         }

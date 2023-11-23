@@ -14,14 +14,13 @@ public class Bullets : MonoBehaviour
         {
             int damage = UnityEngine.Random.Range(minDamage, maxDamage);
             collision.GetComponent<PlayerHealth>().TakeDamage(damage);
-            Debug.Log("Player takes damage: " + damage);
             Destroy(gameObject);
         }
         if (collision.CompareTag("Enemy") && friendlyBullet)
         {
+           
             int damage = UnityEngine.Random.Range(minDamage, maxDamage);
             collision.GetComponent<EnemyControler>().TakeDamage(damage);
-            Debug.Log("Enemy takes damage: " + damage);
             Destroy(gameObject);
         }
     }

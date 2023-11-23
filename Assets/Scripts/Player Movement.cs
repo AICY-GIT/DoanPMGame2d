@@ -32,9 +32,9 @@ public class PlayerMovement : MonoBehaviour
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
 
-       // kiem tra di chuyen
+        // kiem tra di chuyen Input.GetKeyDown(KeyCode.LeftShift
         isMoving = moveInput != Vector2.zero;
-        if (Input.GetKeyDown(KeyCode.Space) && _dashTime <= 0 && isDashing == false&& Time.time - timeSinceLastDash >= dashDelay)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _dashTime <= 0 && isDashing == false&& Time.time - timeSinceLastDash >= dashDelay)
         {
             speed += dashBoost;
             _dashTime = dashTime;
